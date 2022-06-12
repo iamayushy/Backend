@@ -4,6 +4,7 @@ const asyncHandler = require('express-async-handler')
 // @access Private
 
 const getGoals = asyncHandler(async(req, res) =>{
+   
     res.status(200).json({message: 'Get Goals'})
 })
 
@@ -13,9 +14,11 @@ const getGoals = asyncHandler(async(req, res) =>{
 const setGoals = asyncHandler(async(req, res) =>{
     if(!req.body.text){
         res.status(400)
-        throw new Error('Please add text field')
+        throw new Error('ADD SOME TEXT')
     }
-    res.status(200).json({message: 'Set Goals'})
+    else{
+    console.log(req.body)
+    res.status(200).json({message: 'Set Goals'})}
 })
 
 // @routes UPDATE /api/goals/id
