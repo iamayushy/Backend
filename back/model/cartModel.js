@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const goalSchema = mongoose.Schema({
+const cartSchema = mongoose.Schema({
     title:{
         type: String,
         required: [true, 'Please Add A Text']
@@ -20,9 +20,13 @@ const goalSchema = mongoose.Schema({
     image: {
         type: String,
         required: true
-    }
+    },
+   no:{
+    type:Number,
+    required: true
+   }
 }, {
     timestamps: true
 })
 
-module.exports = mongoose.model('Goal', goalSchema) 
+module.exports = mongoose.model('Cart', cartSchema) 
