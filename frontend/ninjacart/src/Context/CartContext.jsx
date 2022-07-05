@@ -29,3 +29,5 @@ const CartContext = ({children}) => {
     )
 }
 export {CartContext, cartData}
+
+// this is lame code 
